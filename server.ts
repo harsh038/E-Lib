@@ -1,8 +1,9 @@
-console.log("hello Harsh!!!");
+import app from "./src/app"
 
-function hst() {
-        console.log("hello Harsh!!!");
+const startServer = () => {
+     const port = process.env.PORT || 3000
+     app.listen(port, () => {
+          console.log(`Server Started on port ${port}`)
+     })
 }
-
-hst();
-// hello;
+startServer()
