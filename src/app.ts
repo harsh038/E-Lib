@@ -1,5 +1,9 @@
-import express from "express";
+import express from "express"
 
-const app = express();
+const app = express()
 
-export default app;
+app.get("/", (req, res) => {
+     res.json({ message: "Welome to E-Lib APIs" })
+})
+
+export default app
