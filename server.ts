@@ -1,7 +1,9 @@
 import app from "./src/app"
 import { config } from "./src/config/config"
+import connectDB from "./src/config/db"
 
-const startServer = () => {
+const startServer = async () => {
+     await connectDB()
      const port = config.port // Access port from the loaded config
      if (!port) {
           console.error("Port is undefined. Check your .env file!")
